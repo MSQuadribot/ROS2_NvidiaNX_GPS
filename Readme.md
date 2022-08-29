@@ -28,12 +28,18 @@ $ ros2 run gps {$processname}
 
 ## What are the available process ?
 
-There are currently five available process :
+There are currently two available process :
 
 talker will provide the information directly from the gps.
 The frequency is quite low (5.5s) due to the fact that the information are emitted with a specific pattern
 
 listened is set to get the data from the publisher.
+
+## What are the topics provided by this package ?
+
+There is only one topics create by the current nodes.
+gps_data is a string message that can easily be sent over the network and used by other ros2 Node.
+It contains the gps data retreived by the publisher and can be displayed by the listener.
 
 ## Important note
 

@@ -5,6 +5,11 @@ from std_msgs.msg import String
 
 
 class GPSSubscriber(Node):
+    '''
+    Create a node providing a subscriber.
+    It will get the gps data from the gps_data topic.
+    The data are then displayed for the user in a terminal.
+    '''
 
     def __init__(self):
         super().__init__('GPS_subscriber')
@@ -20,6 +25,11 @@ class GPSSubscriber(Node):
 
 
 def main(args=None):
+    '''
+    This function is called when the user launch the executable file.
+    Ros2 will directly start the program here, according to the setup file.
+    '''
+
     rclpy.init(args=args)
 
     GPS_subscriber = GPSSubscriber()

@@ -7,6 +7,11 @@ from std_msgs.msg import String
 
 
 class GPSPublisher(Node):
+    '''
+    This Node will create a publisher.
+    The goal is to get the data from the GPS and to send them through a ROS2 topic.
+    The data can then be picked up by another node and used for other purpose.
+    '''
 
     def __init__(self):
         super().__init__('GPS_publisher')
@@ -34,6 +39,11 @@ class GPSPublisher(Node):
 
 
 def main(args=None):
+    '''
+    This function is called when the user launch the executable file.
+    Ros2 will directly start the program here, according to the setup file.
+    '''
+
     rclpy.init(args=args)
 
     GPS_publisher = GPSPublisher()
